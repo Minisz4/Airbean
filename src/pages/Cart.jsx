@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "../assets/components/Nav/Nav";
 import useProductStore from "../assets/Globals/Products";
 
@@ -37,8 +37,60 @@ const Cart = () => {
               </button>
             </div>
           ))}
+        <App />
       </div>
     </>
+  );
+};
+
+const App = () => {
+  const [response, setResponse] = useState(null);
+
+  const postOrder = async () => {
+    //funktionen för att skicka beställningen
+    try {
+      const response = await fetch(
+        "https://airbean-api-xjlcn.ondigitalocean.app/api/beans/order",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            //skicka till apiet
+            details: {
+              order: [
+                {
+                  name: "Bryggkaffe",
+                  price: 39,
+                },
+                {
+                  name: "Bryggkaffe",
+                  price: 39,
+                },
+              ],
+            },
+          }),
+        }
+      );
+      const data = await response.json(); //göra api:et till Json
+      setResponse(data); // uppdaterar det nya värdet med api svaret
+      console.log(data);
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
+  return (
+    <div>
+      <button onClick={postOrder}>Make Order</button>
+      {response && (
+        <div>
+          <p>ETA: {response.eta}</p>
+          <p>Order Number: {response.orderNr}</p>
+        </div>
+      )}
+    </div>
   );
 };
 
