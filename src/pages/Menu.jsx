@@ -19,8 +19,9 @@ const Menu = () => {
       <div>
         {products.map((product, index) => (
           <div key={index} onClick={() => handleProduct(index)}>
-            <h2>{product.name}</h2>
-            <p>{product.price}</p>
+            <h2>{product.title}</h2>
+            <p>{product.desc}</p>
+            <p>{product.price}kr</p>
             <p>Amount: {product.amount}</p>
           </div>
         ))}
