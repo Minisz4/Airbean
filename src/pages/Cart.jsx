@@ -5,12 +5,14 @@ import useApiResponse from "../assets/Globals/ApiResponse";
 import { useNavigate } from "react-router-dom";
 import "./cart.css";
 import airbeanWelcomeIcon from "./airbean-welcome.png";
+import Header from "../assets/components/Nav/header/Header";
 
 const Cart = () => {
   const navigate = useNavigate();
   const { setResponse } = useApiResponse();
   const { products, updateAmount } = useProductStore();
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleAmountChange = (index, amount) => {
     updateAmount(index, amount);
   };
@@ -46,7 +48,8 @@ const Cart = () => {
 
   return (
     <>
-      <Nav />
+      <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <Header setIsMenuOpen={setIsMenuOpen} />
       <div className="cart-container">
         <div className="cart-overlay"></div>
         <div className="cart-text">

@@ -1,4 +1,3 @@
-// Status.js
 import React from "react";
 import Nav from "../assets/components/Nav/Nav";
 import useApiResponse from "../assets/Globals/ApiResponse";
@@ -14,14 +13,15 @@ const Status = () => {
       <div className="status-container">
         <div className="order-info">
           <p>Ordernummer: {response.ordernummer}</p>
+          <img
+            src={loadingDroneIcon}
+            alt="Loading Drone Icon"
+            className="loading-icon"
+          />
           <p>Din beställning</p>
           <p>ETA: {response.eta}</p>
         </div>
-        <img
-          src={loadingDroneIcon}
-          alt="Loading Drone Icon"
-          className="loading-icon"
-        />
+
         <button>Ok, cool</button>
       </div>
     </>

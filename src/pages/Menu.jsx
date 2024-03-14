@@ -1,6 +1,5 @@
-// Menu.jsx
-
-import React from "react";
+import React, { useState } from "react";
+import Header from "../assets/components/Nav/header/Header";
 import Nav from "../assets/components/Nav/Nav";
 import useProductStore from "../assets/Globals/Products";
 import "./Menu.css";
@@ -11,24 +10,26 @@ const Menu = () => {
   const handleProduct = (index) => {
     updateAmount(index, products[index].amount + 1);
   };
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <>
-      <Nav />
+      <Header setIsMenuOpen={setIsMenuOpen} />
+      <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="main-container">
         <div className="Menu">
+          <h1>Meny</h1>
           {products.map((product, index) => (
-            <div key={index} onClick={() => handleProduct(index)}>
-              <h1>Meny</h1>
-              <h2>{product.title}</h2>
-              <p>{product.desc}</p>
+            <div key={index}>
+              <div>
+                <h2>{product.title}</h2>
+                <p>{product.desc}</p>
+              </div>
               <p>{product.price}kr</p>
-              <p>Amount: {product.amount}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="footer"></div>
     </>
   );
 };

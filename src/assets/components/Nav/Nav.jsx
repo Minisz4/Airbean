@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const Nav = () => {
+import "./Nav.css";
+const Nav = (props) => {
   return (
-    <nav>
+    <nav style={{ display: props.isMenuOpen ? "block" : "none" }}>
+      <button onClick={() => props.setIsMenuOpen(false)}>Close</button>
       <ul>
         <li>
           <Link to="/"> Landing </Link>
@@ -15,6 +17,9 @@ const Nav = () => {
         </li>
         <li>
           <Link to="/cart"> Cart</Link>
+        </li>
+        <li>
+          <Link to="/about"> About</Link>
         </li>
       </ul>
     </nav>

@@ -5,6 +5,7 @@ import Menu from "./pages/Menu";
 import Cart from "./pages/Cart";
 import Status from "./pages/Status";
 import Landing from "./pages/Landing";
+import About from "./pages/About";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,7 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/status" element={<Status />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </BrowserRouter>
     </>
