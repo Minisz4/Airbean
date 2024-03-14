@@ -1,25 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Nav.css";
+import navIcon from "./nav-icon.png";
+
 const Nav = (props) => {
   return (
     <nav style={{ display: props.isMenuOpen ? "block" : "none" }}>
       <button onClick={() => props.setIsMenuOpen(false)}>Close</button>
       <ul>
         <li>
-          <Link to="/"> Landing </Link>
+          <Link onClick={() => props.setIsMenuOpen(false)} to="/status">
+            {" "}
+            Status
+          </Link>
         </li>
         <li>
-          <Link to="/status"> Status</Link>
+          <Link onClick={() => props.setIsMenuOpen(false)} to="/menu">
+            {" "}
+            Menu
+          </Link>
         </li>
         <li>
-          <Link to="/menu"> Menu</Link>
+          <Link onClick={() => props.setIsMenuOpen(false)} to="/cart">
+            {" "}
+            Cart
+          </Link>
         </li>
         <li>
-          <Link to="/cart"> Cart</Link>
-        </li>
-        <li>
-          <Link to="/about"> About</Link>
+          <Link onClick={() => props.setIsMenuOpen(false)} to="/about">
+            {" "}
+            About
+          </Link>
         </li>
       </ul>
     </nav>

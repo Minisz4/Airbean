@@ -37,12 +37,6 @@
   z-index: 2;
 }
 
-.cart-text button {
-  background-color: black; /* Bakgrundsfärg svart */
-  color: white; /* Textfärg vit */
-  padding: 10px 20px; /* Lite padding för att göra knappen rundad */
-  border: none; /* Ta bort kantlinjer */
-  border-radius: 5px; /* Runda hörn */
-  cursor: pointer; /* Gör pekaren till en hand när man hovrar över knappen */
-  margin-top: 10px; /* Lite utrymme över knappen */
+.page-cart header {
+  filter: grayscale(100%);
 }

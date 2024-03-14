@@ -48,40 +48,43 @@ const Cart = () => {
 
   return (
     <>
-      <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-      <Header setIsMenuOpen={setIsMenuOpen} />
-      <div className="cart-container">
-        <div className="cart-overlay"></div>
-        <div className="cart-text">
-          <h2>Din beställning</h2>
-          {products.filter((product) => product.amount > 0).length > 0 ? (
-            products
-              .filter((product) => product.amount > 0)
-              .map((product, index) => (
-                <div key={index}>
-                  <h3>{product.title}</h3>
-                  <p>Price: {product.price}</p>
-                  <p>Amount: {product.amount}</p>
-                  <button
-                    onClick={() =>
-                      handleAmountChange(index, product.amount - 1)
-                    }
-                  >
-                    -
-                  </button>
-                  <button
-                    onClick={() =>
-                      handleAmountChange(index, product.amount + 1)
-                    }
-                  >
-                    +
-                  </button>
-                </div>
-              ))
-          ) : (
-            <p>Ingen beställning är lagd ännu</p>
-          )}
-          <button onClick={postOrder}>Gör beställning</button>
+      <div className="page-cart">
+        <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+        <Header setIsMenuOpen={setIsMenuOpen} />
+        <div className="cart-container">
+          <div className="cart-overlay"></div>
+          <div className="cart-text">
+            <h2>Din beställning</h2>
+            {products.filter((product) => product.amount > 0).length > 0 ? (
+              products
+                .filter((product) => product.amount > 0)
+                .map((product, index) => (
+                  <div key={index}>
+                    <h3>{product.title}</h3>
+                    <p>Price: {product.price}</p>
+                    <p>Amount: {product.amount}</p>
+                    <button
+                      onClick={() =>
+                        handleAmountChange(index, product.amount - 1)
+                      }
+                    >
+                      -
+                    </button>
+                    <button
+                      onClick={() =>
+                        handleAmountChange(index, product.amount + 1)
+                      }
+                    >
+                      +
+                    </button>
+                  </div>
+                ))
+            ) : (
+              <p>Ingen beställning är lagd ännu</p>
+            )}
+            <button onClick={postOrder}>Gör beställning</button>
+          </div>
+          <footer></footer>
         </div>
       </div>
     </>

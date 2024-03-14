@@ -1,3 +1,7 @@
+.wrapper {
+  width: 750px;
+}
+
 .footer {
   position: absolute;
   bottom: 40;
@@ -14,10 +18,24 @@
   border: 2px solid black;
 }
 
-.Menu div {
+.Menu-h1 {
+  text-align: center;
 }
 
 .addButton {
   width: 70px;
   height: 70px;
+}
+
+.buttonX {
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 10px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-around;
 }

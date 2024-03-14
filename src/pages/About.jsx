@@ -1,15 +1,19 @@
 import React from "react";
 import Nav from "../assets/components/Nav/Nav";
+import Header from "../assets/components/Nav/header/Header";
 import "./About.css";
 import founderAvatar from "./founder-avatar.png";
+import { useState } from "react";
+import FooterBackground from "./footer-background.png";
 
 const About = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <>
-      <Nav />
+      {" "}
+      <Header setIsMenuOpen={setIsMenuOpen} />
+      <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="about-container">
-        <div className="background-header"></div>
-
         <div className="about-content">
           <h1>About Us</h1>
           <p>
@@ -32,7 +36,7 @@ const About = () => {
         </div>
         <h1>Eva Cortado</h1>
         <p>VD och grundare</p>
-        <div className="background-footer"></div>
+        <img src={FooterBackground} alt="" />
       </div>
     </>
   );
