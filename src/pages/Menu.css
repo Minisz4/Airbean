@@ -1,0 +1,39 @@
+/* Menu.css */
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("header-background.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(243, 228, 225, 1);
+}
+
+.footer {
+  position: absolute;
+  bottom: 40;
+  width: 100%;
+  height: 100px;
+  background-color: rgba(243, 228, 225, 1);
+  background-image: url("footer-background.png");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.Menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.Menu div {
+  position: relative;
+  z-index: 2;
+}

@@ -1,20 +1,29 @@
+// Status.js
 import React from "react";
 import Nav from "../assets/components/Nav/Nav";
 import useApiResponse from "../assets/Globals/ApiResponse";
+import "./Status.css";
+import loadingDroneIcon from "./loadingdrone.png";
 
 const Status = () => {
-  //lokal variabel/etc
-  const { response } = useApiResponse(); //hämtar vad vi vill ha från vår apiResponse
+  const { response } = useApiResponse();
+
   return (
     <>
-      {response.orderInProgress ? (
-        <>
-          <p>ETA: {response.eta} </p>
+      <Nav />
+      <div className="status-container">
+        <div className="order-info">
           <p>Ordernummer: {response.ordernummer}</p>
-        </>
-      ) : (
-        <p>Ingen order lagd än</p>
-      )}
+          <p>Din beställning</p>
+          <p>ETA: {response.eta}</p>
+        </div>
+        <img
+          src={loadingDroneIcon}
+          alt="Loading Drone Icon"
+          className="loading-icon"
+        />
+        <button>Ok, cool</button>
+      </div>
     </>
   );
 };
