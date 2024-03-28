@@ -15,27 +15,44 @@ const About = () => {
       <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <div className="about-container">
         <div className="about-content">
-          <h1>About Us</h1>
+          <h1>Vårt kaffe</h1>
+          <h4>
+            Pumpkin spice mug, barista cup, sit macchiato, kopi-luwak, doppio,
+            grounds dripper, crema, strong whipped, variety extra iced id lungo
+            half and half mazagran. Pumpkin spice.
+          </h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Que dark fair trade, spoon decaffeinated, barista wings whipped, as
+            rich aftertaste, con panna milk black, arabica white rich beans
+            single shot extra affogato. So affogato macchiato sit extraction
+            instant grinder seasonal organic, turkish single shot, single
+            origin, and robusta strong to go so dripper. Viennese froth, grounds
+            caramelization skinny aromatic cup kopi-luwak, fair trade flavour,
+            frappuccino medium, café au lait flavour cultivar ut bar instant
+            kopi-luwak.
           </p>
           <p>
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-            nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur.
+            Roast id macchiato, single shot siphon mazagran milk fair trade est
+            aroma a half and half and, so, galão iced to go, whipped as cream
+            cup pumpkin spice iced. At extra, rich grinder, brewed to go,
+            steamed half and half at, that, percolator macchiato trifecta and
+            body as arabica dripper. In galão black java milk sit trifecta,
+            robusta, acerbic café au lait instant shop latte. Seasonal bar shop
+            filter aroma id, crema, affogato viennese cultivar aftertaste,
+            seasonal, percolator cream black, galão flavour, milk aromatic
+            turkish skinny crema.
           </p>
           <img
             src={founderAvatar}
             alt="Founder Avatar"
             className="founder-avatar"
           />
+
+          <h1>Eva Cortado</h1>
+          <p>VD och grundare</p>
         </div>
-        <h1>Eva Cortado</h1>
-        <p>VD och grundare</p>
+      </div>
+      <div className="footer-background">
         <img src={FooterBackground} alt="" />
       </div>
     </>

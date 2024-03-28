@@ -20,7 +20,7 @@ const Cart = () => {
   const postOrder = async () => {
     try {
       const response = await fetch(
-        "https://airbean-api-xjlcn.ondigitalocean.app/api/beans/order",
+        "https://airbean-9pcyw.ondigitalocean.app/api/beans/order",
         {
           method: "POST",
           headers: {
