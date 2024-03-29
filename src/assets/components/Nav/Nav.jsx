@@ -6,29 +6,48 @@ import navIcon from "./nav-icon.png";
 const Nav = (props) => {
   return (
     <nav style={{ display: props.isMenuOpen ? "block" : "none" }}>
-      <button onClick={() => props.setIsMenuOpen(false)}>Close</button>
-      <ul>
+      <ul className="ullist">
         <li>
-          <Link onClick={() => props.setIsMenuOpen(false)} to="/status">
-            {" "}
+          <button
+            className="close-button"
+            onClick={() => props.setIsMenuOpen(false)}
+          >
+            X
+          </button>
+        </li>
+        <li>
+          <Link
+            onClick={() => props.setIsMenuOpen(false)}
+            to="/status"
+            style={{ textDecoration: "none", color: "white" }}
+          >
             Status
           </Link>
         </li>
         <li>
-          <Link onClick={() => props.setIsMenuOpen(false)} to="/menu">
-            {" "}
+          <Link
+            onClick={() => props.setIsMenuOpen(false)}
+            to="/menu"
+            style={{ textDecoration: "none", color: "white" }}
+          >
             Menu
           </Link>
         </li>
         <li>
-          <Link onClick={() => props.setIsMenuOpen(false)} to="/cart">
-            {" "}
+          <Link
+            onClick={() => props.setIsMenuOpen(false)}
+            to="/cart"
+            style={{ textDecoration: "none", color: "white" }}
+          >
             Cart
           </Link>
         </li>
         <li>
-          <Link onClick={() => props.setIsMenuOpen(false)} to="/about">
-            {" "}
+          <Link
+            onClick={() => props.setIsMenuOpen(false)}
+            to="/about"
+            style={{ textDecoration: "none", color: "white" }}
+          >
             About
           </Link>
         </li>

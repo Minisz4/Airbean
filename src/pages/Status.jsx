@@ -18,8 +18,10 @@ const Status = () => {
             alt="Loading Drone Icon"
             className="loading-icon"
           />
-          <p>Din beställning</p>
-          <p>ETA: {response.eta}</p>
+          <div className="bold">
+            <p>Din beställning</p>
+            <p>ETA: {response.eta}</p>
+          </div>
         </div>
 
         <button>Ok, cool</button>

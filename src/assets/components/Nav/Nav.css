@@ -7,4 +7,28 @@ nav {
   background-color: black;
   color: white;
   z-index: 999;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+nav ul li {
+  font-size: 50px;
+  margin: 32px;
+  color: white;
+  font-family: serif;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ullist {
+  list-style: none;
+  color: white;
 }

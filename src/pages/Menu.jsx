@@ -29,13 +29,13 @@ const Menu = () => {
                     updateAmount(index, products[index].amount + 1)
                   }
                 >
-                  x
+                  +
                 </button>
                 <div>
-                  <h2>{product.title}</h2>
+                  <h2>{product.title}.....</h2>
                   <p>{product.desc}</p>
                 </div>
-                <p>{product.price}kr</p>
+                <p className="price">{product.price}kr</p>
               </div>
             ))}
           </div>

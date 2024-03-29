@@ -10,7 +10,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(100%);
+  filter: grayscale(150%);
+  width: 750px;
 }
 
 .cart-overlay {
@@ -30,7 +31,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: white;
   padding: 20px;
   text-align: center;
   font-size: 24px;
@@ -39,4 +40,10 @@
 
 .page-cart header {
   filter: grayscale(100%);
+}
+
+.orderbtn {
+  background-color: black;
+  color: white;
+  border-radius: 10%;
 }

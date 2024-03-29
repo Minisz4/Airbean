@@ -82,7 +82,9 @@ const Cart = () => {
             ) : (
               <p>Ingen beställning är lagd ännu</p>
             )}
-            <button onClick={postOrder}>Gör beställning</button>
+            <button className="orderbtn" onClick={postOrder}>
+              Take my money!
+            </button>
           </div>
           <footer></footer>
         </div>
