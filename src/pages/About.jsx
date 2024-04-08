@@ -52,7 +52,7 @@ const About = () => {
           <p>VD och grundare</p>
         </div>
       </div>
-      <div className="footer-background">
+      <div className="background-footer">
         <img src={FooterBackground} alt="" />
       </div>
     </>
