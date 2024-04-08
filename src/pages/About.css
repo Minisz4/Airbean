@@ -33,7 +33,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: rgba(243, 228, 225, 1); /* Lägg till bakgrundsfärg */
+  background-color: rgba(243, 228, 225, 1);
 }
 
 .about-content {

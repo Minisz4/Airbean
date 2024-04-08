@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import "./cart.css";
 import airbeanWelcomeIcon from "./airbean-welcome.png";
 import Header from "../assets/components/Nav/header/Header";
+import FooterBackground from "./footer-background.png";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -50,7 +51,7 @@ const Cart = () => {
     <>
       <div className="page-cart">
         <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
-        <Header setIsMenuOpen={setIsMenuOpen} />
+        <Header setIsMenuOpen={setIsMenuOpen} showCartIcon={true} />
         <div className="cart-container">
           <div className="cart-overlay"></div>
           <div className="cart-text">
@@ -86,8 +87,12 @@ const Cart = () => {
               Take my money!
             </button>
           </div>
-          <footer></footer>
         </div>
+        <footer>
+          <div className="footer-background">
+            <img src={FooterBackground} alt="" />
+          </div>
+        </footer>
       </div>
     </>
   );

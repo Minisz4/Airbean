@@ -1,5 +1,17 @@
+.main-header {
+  position: relative;
+}
 .nav-icon {
   position: fixed;
   top: 20px;
   left: 20px;
+}
+
+.cart-icon {
+  background-color: black;
+  border-radius: 50%;
+  position: fixed;
+  top: 20px;
+  left: 650px;
+  padding: 20px;
 }

@@ -16,7 +16,7 @@ const Menu = () => {
   return (
     <>
       <div className="wrapper">
-        <Header setIsMenuOpen={setIsMenuOpen} />
+        <Header setIsMenuOpen={setIsMenuOpen} showCartIcon={true} />
         <Nav isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
         <div className="main-container">
           <div className="Menu">

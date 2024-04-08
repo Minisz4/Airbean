@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
 const useProductStore = create((set) => ({
+  itemsInCart: 0,
   products: [
     {
       id: "coffee-vxig26my4y",
